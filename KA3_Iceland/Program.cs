@@ -32,12 +32,12 @@ namespace KA3_Iceland
         static void Main(string[] args)
         {
             ReadData();
-            var celebration_date = BoruvkaKraskl();
-            OutputData(celebration_date);
+            var dates_in_st = BoruvkaKraskl();
+            OutputData(dates_in_st.Last().Date);
             //Console.ReadKey();
         }
 
-        static string BoruvkaKraskl()
+        static List<Bridge> BoruvkaKraskl()
         {
             List<Bridge> MinSpanningTree = new List<Bridge>();
             for (ushort i = 0; i < k; ++i)
@@ -64,7 +64,7 @@ namespace KA3_Iceland
                     MinSpanningTree.Add(vw);
                 }
             }
-            return MinSpanningTree.Last().Date;
+            return MinSpanningTree;
         }
 
         static void Merge(ushort v, ushort w, ushort p, ushort q)
