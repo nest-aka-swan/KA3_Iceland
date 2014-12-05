@@ -17,7 +17,6 @@ namespace KA3_Iceland
         }
         public ushort Island1 { get; private set; }
         public ushort Island2 { get; private set; }
-        public ushort Weight { get; private set; }
         public string Date { get; private set; }
     }
     class Program
